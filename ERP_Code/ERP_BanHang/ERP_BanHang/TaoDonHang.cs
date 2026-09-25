@@ -9,7 +9,8 @@ namespace ERP_BanHang
 {
     public partial class TaoDonHang : Form
     {
-        private string connectionString = ConfigurationManager.ConnectionStrings["ERP_Connection"].ConnectionString;
+        private string connectionString = ConfigurationManager.ConnectionStrings["ERP_Connection"]?.ConnectionString
+            ?? ConfigurationManager.ConnectionStrings["ERP_BanHang"]?.ConnectionString;
 
         public TaoDonHang()
         {
@@ -205,9 +206,6 @@ namespace ERP_BanHang
             }
         }
 
-        // ==========================================
-        // BẮT ĐIỀU KIỆN KHI BẤM "+ THÊM SP"
-        // ==========================================
         private void btnThemSP_Click(object sender, EventArgs e)
         {
             if (cboSanPham.SelectedIndex == -1 || cboSanPham.SelectedItem == null)
@@ -231,7 +229,6 @@ namespace ERP_BanHang
             decimal donGia = Convert.ToDecimal(drv["giasp"]);
             int tonKho = Convert.ToInt32(drv["tonkho"]);
 
-            // Kiểm tra số lượng hiện tại trong DataGridView để tính tổng mua
             int slHienTaiTrongGrid = 0;
             DataGridViewRow rowSua = null;
 
@@ -247,7 +244,6 @@ namespace ERP_BanHang
 
             int tongSoLuongMua = slHienTaiTrongGrid + soLuongThem;
 
-            // KIỂM TRA TỒN KHO
             if (tongSoLuongMua > tonKho)
             {
                 MessageBox.Show($"Sản phẩm [{tenSP}] trong kho chỉ còn lại {tonKho} sản phẩm!\n(Bạn đã chọn trong đơn: {slHienTaiTrongGrid}, thêm mới: {soLuongThem})",
@@ -255,7 +251,6 @@ namespace ERP_BanHang
                 return;
             }
 
-            // Cập nhật hoặc thêm mới vào DataGridView
             if (rowSua != null)
             {
                 rowSua.Cells["colSoLuong"].Value = tongSoLuongMua;
@@ -279,9 +274,6 @@ namespace ERP_BanHang
             }
         }
 
-        // ==========================================
-        // BẮT ĐIỀU KIỆN KHI SỬA TRỰC TIẾP TRÊN GRID
-        // ==========================================
         private void dgvChiTietDonHang_CellValueChanged(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0 && dgvChiTietDonHang.Columns[e.ColumnIndex].Name == "colSoLuong")
@@ -323,13 +315,12 @@ namespace ERP_BanHang
         }
 
         // ==========================================
-        // BẮT ĐIỀU KIỆN KHI BẤM "LƯU ĐƠN HÀNG"
+        // LƯU ĐƠN HÀNG VÀ TỰ ĐỘNG TRỪ TỒN KHO
         // ==========================================
         private void btnLuuDonHang_Click(object sender, EventArgs e)
         {
             string idDH = txtMaDH.Text.Trim();
 
-            // 1. Kiểm tra Mã đơn hàng
             if (string.IsNullOrEmpty(idDH))
             {
                 MessageBox.Show("Mã đơn hàng không được để trống!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -337,7 +328,6 @@ namespace ERP_BanHang
                 return;
             }
 
-            // 2. Kiểm tra chọn Khách hàng
             if (cboKhachHang.SelectedIndex == -1 || cboKhachHang.SelectedValue == null)
             {
                 MessageBox.Show("Vui lòng chọn Khách hàng mua hàng!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -345,7 +335,6 @@ namespace ERP_BanHang
                 return;
             }
 
-            // 3. Kiểm tra chọn Nhân viên lập đơn
             if (cboNhanVien.SelectedIndex == -1 || cboNhanVien.SelectedValue == null)
             {
                 MessageBox.Show("Vui lòng chọn Nhân viên phụ trách đơn hàng!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -353,7 +342,6 @@ namespace ERP_BanHang
                 return;
             }
 
-            // 4. Kiểm tra danh sách sản phẩm trong giỏ hàng
             if (dgvChiTietDonHang.Rows.Count == 0 || (dgvChiTietDonHang.Rows.Count == 1 && dgvChiTietDonHang.Rows[0].IsNewRow))
             {
                 MessageBox.Show("Vui lòng thêm ít nhất 1 sản phẩm vào đơn hàng!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -370,7 +358,6 @@ namespace ERP_BanHang
                 {
                     conn.Open();
 
-                    // 5. Kiểm tra trùng mã đơn hàng trong CSDL
                     string checkExistQuery = "SELECT COUNT(*) FROM donhang WHERE id_dh = @ID_DH";
                     using (NpgsqlCommand cmdCheck = new NpgsqlCommand(checkExistQuery, conn))
                     {
@@ -383,12 +370,12 @@ namespace ERP_BanHang
                         }
                     }
 
-                    // 6. THỰC HIỆN LƯU TRANSACTION
+                    // BẮT ĐẦU TRANSACTION
                     using (NpgsqlTransaction transaction = conn.BeginTransaction())
                     {
                         try
                         {
-                            // Lưu vào bảng donhang
+                            // 1. Lưu vào bảng donhang
                             string queryDH = @"INSERT INTO donhang (id_dh, id_kh, id_nv, ngaytao, trangthai) 
                                                VALUES (@ID_DH, @ID_KH, @ID_NV, CURRENT_TIMESTAMP, N'Chờ xử lý')";
 
@@ -400,7 +387,7 @@ namespace ERP_BanHang
                                 cmdDH.ExecuteNonQuery();
                             }
 
-                            // Lưu vào bảng chitietdonhang
+                            // 2. Lưu chitietdonhang VÀ CẬP NHẬT TRỪ TỒN KHO trong hanghoa
                             int index = 1;
                             foreach (DataGridViewRow row in dgvChiTietDonHang.Rows)
                             {
@@ -413,6 +400,7 @@ namespace ERP_BanHang
                                 string donGiaStr = row.Cells["colDonGia"].Value.ToString().Replace("đ", "").Replace(".", "").Replace(",", "").Trim();
                                 decimal donGia = Convert.ToDecimal(donGiaStr);
 
+                                // 2.1 Thêm Chi Tiết Đơn Hàng
                                 string queryCT = @"INSERT INTO chitietdonhang (id_ctdh, id_dh, id_sp, soluong, dongia) 
                                                    VALUES (@ID_CTDH, @ID_DH, @ID_SP, @SoLuong, @DonGia)";
 
@@ -426,11 +414,30 @@ namespace ERP_BanHang
                                     cmdCT.ExecuteNonQuery();
                                 }
 
+                                // 2.2 Cập nhật TRỪ SỐ LƯỢNG TỒN KHO trong bảng hanghoa
+                                string queryTruTonKho = @"
+                                    UPDATE hanghoa 
+                                    SET tonkho = tonkho - @SoLuongMua 
+                                    WHERE mahang = (SELECT mahang FROM sanpham WHERE id_sp = @ID_SP) 
+                                      AND tonkho >= @SoLuongMua";
+
+                                using (NpgsqlCommand cmdTruTon = new NpgsqlCommand(queryTruTonKho, conn, transaction))
+                                {
+                                    cmdTruTon.Parameters.AddWithValue("@SoLuongMua", soLuong);
+                                    cmdTruTon.Parameters.AddWithValue("@ID_SP", idSP);
+
+                                    int rowsAffected = cmdTruTon.ExecuteNonQuery();
+                                    if (rowsAffected == 0)
+                                    {
+                                        throw new Exception($"Sản phẩm có mã [{idSP}] không đủ tồn kho để thực hiện giao dịch này!");
+                                    }
+                                }
+
                                 index++;
                             }
 
                             transaction.Commit();
-                            MessageBox.Show($"Tạo đơn hàng {idDH} thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            MessageBox.Show($"Tạo đơn hàng {idDH} và trừ tồn kho thành công!", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                             this.DialogResult = DialogResult.OK;
                             this.Close();
@@ -438,7 +445,7 @@ namespace ERP_BanHang
                         catch (Exception exTx)
                         {
                             transaction.Rollback();
-                            MessageBox.Show("Lỗi khi lưu chi tiết đơn hàng: " + exTx.Message, "Lỗi Transaction", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            MessageBox.Show("Lỗi khi lưu đơn hàng và trừ tồn kho: " + exTx.Message, "Lỗi Transaction", MessageBoxButtons.OK, MessageBoxIcon.Error);
                         }
                     }
                 }

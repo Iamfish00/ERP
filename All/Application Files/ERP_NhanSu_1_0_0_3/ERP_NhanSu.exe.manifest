@@ -121,19 +121,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>I2rZWIzk5wyrl3le249JN0fSPecirY4VeqIbKnpSa/c=</dsig:DigestValue>
+        <dsig:DigestValue>cuLpmiy9xsvAuNJ76xtjnDUq7/xRo93y2xDnXhyZDKM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ERP_NhanSu.exe" size="216064">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ERP_NhanSu.exe" size="216576">
       <assemblyIdentity name="ERP_NhanSu" version="1.0.0.2" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>8iNqa9Yyh+Yu2Ghb2nERv5wXdnd/lshENLg6RaKQ9SU=</dsig:DigestValue>
+        <dsig:DigestValue>q8NY4OCP1e0IE1v/PDHSfS/zM4ArF65iMjM83JjYyCY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -306,6 +306,18 @@
     </dependentAssembly>
   </dependency>
   <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Newtonsoft.Json.dll" size="721320">
+      <assemblyIdentity name="Newtonsoft.Json" version="13.0.0.0" publicKeyToken="30AD4FE6B2A6AEED" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
+        <dsig:DigestValue>8MB68OhNTdTaS9eCO6RTW8BIGzv2I+1Atlm2gUemu3U=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
     <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Npgsql.dll" size="772096">
       <assemblyIdentity name="Npgsql" version="4.1.12.0" publicKeyToken="5D8B90D52F46FDA7" language="neutral" processorArchitecture="msil" />
       <hash>
@@ -437,22 +449,22 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="ERP_BanHang.exe.config" size="2585">
+  <file name="ERP_BanHang.exe.config" size="2870">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>enczwtxdBLQ5P16OgtihqZ9pyv/xV9OrXYtw+IRCly8=</dsig:DigestValue>
+      <dsig:DigestValue>6Bn5cLkgRPv3OCNoOSSVO/Z29fASbvHcuejtOKD77TM=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="ERP_NhanSu.exe.config" size="2631">
+  <file name="ERP_NhanSu.exe.config" size="2676">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>wW4lG9e8vr3L66x1qjRWFkUMRTv1sLVFcXOG2HEHR0E=</dsig:DigestValue>
+      <dsig:DigestValue>nkaUKe/x8L25daWedTc8Gf7cnjaV/pZXf17AQ9o+u4c=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Resources\logo.jpg" size="368277">

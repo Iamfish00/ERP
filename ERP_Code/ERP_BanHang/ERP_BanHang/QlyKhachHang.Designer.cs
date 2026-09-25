@@ -1,4 +1,4 @@
-namespace ERP_BanHang
+﻿namespace ERP_BanHang
 {
     partial class QlyKhachHang
     {
@@ -50,9 +50,6 @@ namespace ERP_BanHang
             this.pnlActionTool = new System.Windows.Forms.Panel();
             this.btnEditCustomer = new System.Windows.Forms.Button();
             this.btnCreateCustomer = new System.Windows.Forms.Button();
-            this.btnReload = new System.Windows.Forms.Button();
-            this.chkAutoReload = new System.Windows.Forms.CheckBox();
-            this.lblLastUpdate = new System.Windows.Forms.Label();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.lblTitle = new System.Windows.Forms.Label();
             this.pnlSidebar.SuspendLayout();
@@ -157,7 +154,7 @@ namespace ERP_BanHang
             this.btnHangTraLoi.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.btnHangTraLoi.Size = new System.Drawing.Size(220, 42);
             this.btnHangTraLoi.TabIndex = 6;
-            this.btnHangTraLoi.Text = "Xử lý hàng trả / lỗi";
+            this.btnHangTraLoi.Text = "Xử lý hàng trả";
             this.btnHangTraLoi.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHangTraLoi.UseVisualStyleBackColor = true;
             this.btnHangTraLoi.Click += new System.EventHandler(this.btnHangTraLoi_Click);
@@ -319,9 +316,6 @@ namespace ERP_BanHang
             // 
             // pnlActionTool
             // 
-            this.pnlActionTool.Controls.Add(this.lblLastUpdate);
-            this.pnlActionTool.Controls.Add(this.chkAutoReload);
-            this.pnlActionTool.Controls.Add(this.btnReload);
             this.pnlActionTool.Controls.Add(this.btnEditCustomer);
             this.pnlActionTool.Controls.Add(this.btnCreateCustomer);
             this.pnlActionTool.Controls.Add(this.txtSearch);
@@ -336,14 +330,13 @@ namespace ERP_BanHang
             // 
             this.btnEditCustomer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnEditCustomer.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(193)))), ((int)(((byte)(7)))));
-            this.btnEditCustomer.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEditCustomer.FlatAppearance.BorderSize = 0;
             this.btnEditCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditCustomer.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnEditCustomer.ForeColor = System.Drawing.Color.Black;
-            this.btnEditCustomer.Location = new System.Drawing.Point(710, 0);
+            this.btnEditCustomer.Location = new System.Drawing.Point(685, 0);
             this.btnEditCustomer.Name = "btnEditCustomer";
-            this.btnEditCustomer.Size = new System.Drawing.Size(150, 36);
+            this.btnEditCustomer.Size = new System.Drawing.Size(160, 36);
             this.btnEditCustomer.TabIndex = 5;
             this.btnEditCustomer.Text = "✏️ Sửa khách hàng";
             this.btnEditCustomer.UseVisualStyleBackColor = false;
@@ -353,64 +346,17 @@ namespace ERP_BanHang
             // 
             this.btnCreateCustomer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCreateCustomer.BackColor = System.Drawing.SystemColors.MenuHighlight;
-            this.btnCreateCustomer.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCreateCustomer.FlatAppearance.BorderSize = 0;
             this.btnCreateCustomer.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCreateCustomer.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
             this.btnCreateCustomer.ForeColor = System.Drawing.Color.White;
-            this.btnCreateCustomer.Location = new System.Drawing.Point(870, 0);
+            this.btnCreateCustomer.Location = new System.Drawing.Point(860, 0);
             this.btnCreateCustomer.Name = "btnCreateCustomer";
-            this.btnCreateCustomer.Size = new System.Drawing.Size(150, 36);
+            this.btnCreateCustomer.Size = new System.Drawing.Size(160, 36);
             this.btnCreateCustomer.TabIndex = 4;
             this.btnCreateCustomer.Text = "+ Thêm khách hàng";
             this.btnCreateCustomer.UseVisualStyleBackColor = false;
             this.btnCreateCustomer.Click += new System.EventHandler(this.btnCreateCustomer_Click);
-            // 
-            // btnReload
-            // 
-            this.btnReload.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnReload.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(167)))), ((int)(((byte)(69)))));
-            this.btnReload.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnReload.FlatAppearance.BorderSize = 0;
-            this.btnReload.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnReload.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
-            this.btnReload.ForeColor = System.Drawing.Color.White;
-            this.btnReload.Location = new System.Drawing.Point(585, 0);
-            this.btnReload.Name = "btnReload";
-            this.btnReload.Size = new System.Drawing.Size(115, 36);
-            this.btnReload.TabIndex = 6;
-            this.btnReload.Text = "🔄 Làm mới";
-            this.btnReload.UseVisualStyleBackColor = false;
-            this.btnReload.Click += new System.EventHandler(this.btnReload_Click);
-            // 
-            // chkAutoReload
-            // 
-            this.chkAutoReload.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.chkAutoReload.AutoSize = true;
-            this.chkAutoReload.Checked = true;
-            this.chkAutoReload.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.chkAutoReload.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.chkAutoReload.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.chkAutoReload.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.chkAutoReload.Location = new System.Drawing.Point(405, 7);
-            this.chkAutoReload.Name = "chkAutoReload";
-            this.chkAutoReload.Size = new System.Drawing.Size(168, 24);
-            this.chkAutoReload.TabIndex = 7;
-            this.chkAutoReload.Text = "⏱ Tự động tải lại (10s)";
-            this.chkAutoReload.UseVisualStyleBackColor = true;
-            this.chkAutoReload.CheckedChanged += new System.EventHandler(this.chkAutoReload_CheckedChanged);
-            // 
-            // lblLastUpdate
-            // 
-            this.lblLastUpdate.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.lblLastUpdate.AutoSize = true;
-            this.lblLastUpdate.Font = new System.Drawing.Font("Segoe UI", 8.5F, System.Drawing.FontStyle.Italic);
-            this.lblLastUpdate.ForeColor = System.Drawing.Color.Gray;
-            this.lblLastUpdate.Location = new System.Drawing.Point(250, 9);
-            this.lblLastUpdate.Name = "lblLastUpdate";
-            this.lblLastUpdate.Size = new System.Drawing.Size(145, 20);
-            this.lblLastUpdate.TabIndex = 8;
-            this.lblLastUpdate.Text = "Cập nhật: --:--:--";
             // 
             // txtSearch
             // 
@@ -448,7 +394,6 @@ namespace ERP_BanHang
             this.Name = "QlyKhachHang";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ERP Bán Hàng - Quản Lý Khách Hàng";
-            this.Activated += new System.EventHandler(this.QlyKhachHang_Activated);
             this.Load += new System.EventHandler(this.QlyKhachHang_Load);
             this.pnlSidebar.ResumeLayout(false);
             this.pnlUserBottom.ResumeLayout(false);
@@ -484,9 +429,6 @@ namespace ERP_BanHang
         private System.Windows.Forms.Panel pnlMainContent;
         private System.Windows.Forms.Panel pnlActionTool;
         private System.Windows.Forms.Label lblTitle;
-        private System.Windows.Forms.Button btnReload;
-        private System.Windows.Forms.CheckBox chkAutoReload;
-        private System.Windows.Forms.Label lblLastUpdate;
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Button btnCreateCustomer;
         private System.Windows.Forms.Button btnEditCustomer;

@@ -91,7 +91,7 @@ namespace ERP_Khach
                             string vaiTro = reader["vaitro"]?.ToString();
 
                             // XÉT PHÂN HỆ ĐƯỢC CHỌN
-                            if (_targetPhanHe.Equals("Bán hàng", StringComparison.OrdinalIgnoreCase))
+                            if (_targetPhanHe.IndexOf("Bán hàng", StringComparison.OrdinalIgnoreCase) >= 0)
                             {
                                 if (KiemTraQuyenBanHang(chucVu, vaiTro))
                                 {
@@ -118,7 +118,7 @@ namespace ERP_Khach
                                                     "Từ chối truy cập", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                                 }
                             }
-                            else if (_targetPhanHe.Equals("Nhân sự", StringComparison.OrdinalIgnoreCase))
+                            else if (_targetPhanHe.IndexOf("Nhân sự", StringComparison.OrdinalIgnoreCase) >= 0)
                             {
                                 if (KiemTraQuyenNhanSu(chucVu, vaiTro))
                                 {
@@ -150,7 +150,7 @@ namespace ERP_Khach
                                                     "Từ chối truy cập", MessageBoxButtons.OK, MessageBoxIcon.Stop);
                                 }
                             }
-                            else if (_targetPhanHe.Equals("Kho", StringComparison.OrdinalIgnoreCase))
+                            else if (_targetPhanHe.IndexOf("Kho", StringComparison.OrdinalIgnoreCase) >= 0)
                             {
                                 if (KiemTraQuyenKho(chucVu, vaiTro))
                                 {

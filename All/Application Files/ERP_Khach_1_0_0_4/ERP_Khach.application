@@ -7,14 +7,14 @@
     <framework targetVersion="4.8" profile="Full" supportedRuntime="4.0.30319" />
   </compatibleFrameworks>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="Application Files\ERP_Khach_1_0_0_4\ERP_Khach.exe.manifest" size="25712">
+    <dependentAssembly dependencyType="install" codebase="Application Files\ERP_Khach_1_0_0_4\ERP_Khach.exe.manifest" size="25715">
       <assemblyIdentity name="ERP_Khach.exe" version="1.0.0.4" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>o1oWlfp4vcYyBJ1jlcbGXDmtwTc93gSzD1+JzedjY/s=</dsig:DigestValue>
+        <dsig:DigestValue>+twWWmy9LbxrNO8tN213Q0JYze31AL9RobJ4ukBiBzA=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

@@ -162,7 +162,7 @@
             this.btnHangTraLoi.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
             this.btnHangTraLoi.Size = new System.Drawing.Size(220, 42);
             this.btnHangTraLoi.TabIndex = 6;
-            this.btnHangTraLoi.Text = "Xử lý hàng trả / lỗi";
+            this.btnHangTraLoi.Text = "Xử lý hàng trả";
             this.btnHangTraLoi.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.btnHangTraLoi.UseVisualStyleBackColor = true;
             this.btnHangTraLoi.Click += new System.EventHandler(this.btnHangTraLoi_Click);

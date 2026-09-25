@@ -1,4 +1,4 @@
-using iText.IO.Image;
+﻿using iText.IO.Image;
 using iText.Kernel.Geom;
 using iText.Kernel.Pdf;
 using iText.Layout;
@@ -292,7 +292,7 @@ namespace ERP_BanHang
             }
         }
 
-        private void XuatFormRaPDF(Panel targetPanel, string filePath)
+                private void XuatFormRaPDF(Panel targetPanel, string filePath)
         {
             // Chụp toàn bộ panel hóa đơn với độ nét cao
             using (Bitmap bmp = new Bitmap(targetPanel.Width, targetPanel.Height))

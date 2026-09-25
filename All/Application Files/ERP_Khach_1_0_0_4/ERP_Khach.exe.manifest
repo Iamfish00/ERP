@@ -114,14 +114,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ERPKho.exe" size="418304">
-      <assemblyIdentity name="ERPKho" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ERPKho1.exe" size="357376">
+      <assemblyIdentity name="ERPKho1" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>xJsee97v/OCWNzGtQB3CiafqChEk+zexnmEuQ9YR/ms=</dsig:DigestValue>
+        <dsig:DigestValue>ALiqHqWRfKfThGpSH5x+ujupW74H9MgX7PGHsaWBMRw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -133,7 +133,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>I2rZWIzk5wyrl3le249JN0fSPecirY4VeqIbKnpSa/c=</dsig:DigestValue>
+        <dsig:DigestValue>cuLpmiy9xsvAuNJ76xtjnDUq7/xRo93y2xDnXhyZDKM=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -145,7 +145,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Br/qEV+dZnIUa5Rfm+CxBNJuSjMDJvaoLhJsUvKOYvY=</dsig:DigestValue>
+        <dsig:DigestValue>OpnI2sIXjJw6CTvgcU3t8zXTOeLjOtslLLJqH47NeSI=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -157,19 +157,19 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>f77VlulS/vuSV1kK5eZpwkY0F7ksG3p7z5Y25hGUwVs=</dsig:DigestValue>
+        <dsig:DigestValue>80MCib05higIiCyB6j6KkWa8XCi8x4QxhfXgxoZ8u9k=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ERP_NhanSu.exe" size="216064">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="ERP_NhanSu.exe" size="216576">
       <assemblyIdentity name="ERP_NhanSu" version="1.0.0.2" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>8iNqa9Yyh+Yu2Ghb2nERv5wXdnd/lshENLg6RaKQ9SU=</dsig:DigestValue>
+        <dsig:DigestValue>q8NY4OCP1e0IE1v/PDHSfS/zM4ArF65iMjM83JjYyCY=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -234,14 +234,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="KE_TOAN_TAI_CHINH.exe" size="126976">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="KE_TOAN_TAI_CHINH.exe" size="127488">
       <assemblyIdentity name="KE_TOAN_TAI_CHINH" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>bv1qU17LFVkDFugDh8rYpVduuX9J+GwAD+eeYuXkL6k=</dsig:DigestValue>
+        <dsig:DigestValue>FpYLYqEL9PWq8Ebw94WcFSEx6Nz0YokPjA8os0b+V2c=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -401,7 +401,7 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="ERPKho.exe.config" size="1546">
+  <file name="ERPKho1.exe.config" size="1546">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
@@ -410,13 +410,13 @@
       <dsig:DigestValue>gCRVEeEhKyJca0gak6ViafIyEJQdX+KANLuLwvimqEo=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="ERP_BanHang.exe.config" size="2585">
+  <file name="ERP_BanHang.exe.config" size="2870">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>enczwtxdBLQ5P16OgtihqZ9pyv/xV9OrXYtw+IRCly8=</dsig:DigestValue>
+      <dsig:DigestValue>6Bn5cLkgRPv3OCNoOSSVO/Z29fASbvHcuejtOKD77TM=</dsig:DigestValue>
     </hash>
   </file>
   <file name="ERP_Khach.exe.config" size="2356">
@@ -437,13 +437,13 @@
       <dsig:DigestValue>SySQVckX00e88Uena8tQ6FpW2HpW/jDBljEFQkQcGtA=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="ERP_NhanSu.exe.config" size="2631">
+  <file name="ERP_NhanSu.exe.config" size="2676">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>wW4lG9e8vr3L66x1qjRWFkUMRTv1sLVFcXOG2HEHR0E=</dsig:DigestValue>
+      <dsig:DigestValue>nkaUKe/x8L25daWedTc8Gf7cnjaV/pZXf17AQ9o+u4c=</dsig:DigestValue>
     </hash>
   </file>
   <file name="KE_TOAN_TAI_CHINH.exe.config" size="1887">
